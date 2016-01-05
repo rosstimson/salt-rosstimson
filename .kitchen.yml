@@ -1,21 +1,19 @@
 ---
 driver:
   name: ec2
-  driver:
-    name: ec2
-    image_id: ami-f709a29c
-    region: us-east-1
-    availability_zone: us-east-1b
-    instance_type: t2.micro
-    subnet_id: subnet-0b213152
-    security_group_ids: ["sg-df2d7ab9"]
-    aws_ssh_key_id: wercker-test-kitchen
-    user_data: prepare_ec2.sh
-  transport:
-    username: ec2-user
-    ssh_key: <%= ENV['TEST_KITCHEN_PRIVATEKEY_PATH'] %>
-    connection_timeout: 60
-    connection_retries: 10
+  image_id: ami-f709a29c
+  region: us-east-1
+  availability_zone: us-east-1b
+  instance_type: t2.micro
+  subnet_id: subnet-0b213152
+  security_group_ids: ["sg-df2d7ab9"]
+  aws_ssh_key_id: wercker-test-kitchen
+  user_data: prepare_ec2.sh
+transport:
+  username: ec2-user
+  ssh_key: <%= ENV['TEST_KITCHEN_PRIVATEKEY_PATH'] %>
+  connection_timeout: 60
+  connection_retries: 10
 
 provisioner:
   name: salt_solo
