@@ -31,7 +31,7 @@ provisioner:
     - vendor
 
 platforms:
-  - name: freebsd-10.2-ec2
+  - name: freebsd-10.2
 
 suites:
   - name: default
