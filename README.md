@@ -1,5 +1,7 @@
 # salt-rosstimson
 
+[![wercker status](https://app.wercker.com/status/f24cd35fa39b309e6344d6786387579f/m/master "wercker status")](https://app.wercker.com/project/bykey/f24cd35fa39b309e6344d6786387579f)
+
 Provision my laptop with [SaltStack][saltstack].
 
 ## Todo
