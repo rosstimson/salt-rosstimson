@@ -2,6 +2,14 @@ box: ruby:2.3.0-slim
 build:
   steps:
     - bundle-install
+    - mktemp:
+        envvar: PRIVATEKEY_PATH
+    - create-file:
+        name: write private ssh key
+        filename: $PRIVATEKEY_PATH
+        content: $TEST_KITCHEN_SSH_PRIVATE
+        overwrite: true
+        hide-from-log: true
     - script:
         name: kitchen test
         code: bundle exec kitchen test default-freebsd-102-ec2

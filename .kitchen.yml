@@ -28,11 +28,11 @@ platforms:
       instance_type: t2.micro
       subnet_id: subnet-0b213152
       security_group_ids: ["sg-df2d7ab9"]
-      aws_ssh_key_id: freebsd-ec2
+      aws_ssh_key_id: wercker-test-kitchen
       user_data: prepare_ec2.sh
     transport:
       username: ec2-user
-      ssh_key: <%= File.expand_path('~/.ssh/freebsd-ec2.pem') %>
+      ssh_key: <%= ENV['TEST_KITCHEN_PRIVATEKEY_PATH'] %>
       connection_timeout: 60
       connection_retries: 10
 
