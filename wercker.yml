@@ -14,4 +14,8 @@ build:
     - script:
         name: kitchen test
         code: bundle exec kitchen test default-freebsd-102
+  after-steps:
+    - script:
+        name: kitchen destroy
+        code: bundle exec kitchen destroy default-freebsd-102
 
