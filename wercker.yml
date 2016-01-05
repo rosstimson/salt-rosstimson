@@ -1,8 +1,7 @@
 box: ruby:2.3.0-slim
 build:
   steps:
-    - bundle-install:
-      without: development
+    - bundle-install
     - mktemp:
         envvar: TEST_KITCHEN_PRIVATEKEY_PATH
     - create-file:
