@@ -2,11 +2,12 @@ box: ruby:2.3.0-slim
 build:
   steps:
     - bundle-install
+        without: development
     - mktemp:
-        envvar: PRIVATEKEY_PATH
+        envvar: TEST_KITCHEN_PRIVATEKEY_PATH
     - create-file:
         name: write private ssh key
-        filename: $PRIVATEKEY_PATH
+        filename: $TEST_KITCHEN_PRIVATEKEY_PATH
         content: $TEST_KITCHEN_SSH_PRIVATE
         overwrite: true
         hide-from-log: true
