@@ -39,10 +39,5 @@ describe 'my user setup' do
       it { should be_owned_by 'rosstimson' }
       it { should be_grouped_into 'rosstimson' }
     end
-
-    # Makefile that sets up dotfiles also install FZF.
-    describe command('/home/rosstimson/.fzf/bin/fzf --version') do
-      its(:exit_status) { should eq 0 }
-    end
   end
 end

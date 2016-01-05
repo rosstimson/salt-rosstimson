@@ -1,8 +1,21 @@
 box: ruby:2.3.0-slim
+no-response-timeout: 15
 build:
   steps:
     - bundle-install
+    - mktemp:
+        envvar: TEST_KITCHEN_PRIVATEKEY_PATH
+    - create-file:
+        name: write private ssh key
+        filename: $TEST_KITCHEN_PRIVATEKEY_PATH
+        content: $TEST_KITCHEN_SSH_PRIVATE
+        overwrite: true
+        hide-from-log: true
     - script:
         name: kitchen test
-        code: bundle exec kitchen test default-freebsd-102-ec2
+        code: bundle exec kitchen test default-freebsd-102
+  after-steps:
+    - script:
+        name: kitchen destroy
+        code: bundle exec kitchen destroy default-freebsd-102
 

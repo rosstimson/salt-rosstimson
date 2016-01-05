@@ -16,8 +16,6 @@ GEM
       test-kitchen (~> 1.4, >= 1.4.1)
     kitchen-salt (0.0.22)
       test-kitchen (~> 1.4)
-    kitchen-vagrant (0.19.0)
-      test-kitchen (~> 1.4)
     mixlib-shellout (2.2.5)
     multi_json (1.11.2)
     net-scp (1.2.1)
@@ -38,7 +36,6 @@ PLATFORMS
 DEPENDENCIES
   kitchen-ec2
   kitchen-salt
-  kitchen-vagrant
   test-kitchen
 
 BUNDLED WITH
