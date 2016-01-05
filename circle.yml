@@ -1,0 +1,8 @@
+machine:
+  ruby:
+    version: 2.2.3
+
+test:
+  override:
+    - bundle exec kitchen test default-freebsd-102-ec2
+

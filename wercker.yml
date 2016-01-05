@@ -1,0 +1,8 @@
+box: ruby:2.3.0-slim
+build:
+  steps:
+    - bundle-install
+    - script:
+        name: kitchen test
+        code: bundle exec kitchen test default-freebsd-102-ec2
+

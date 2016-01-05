@@ -1,0 +1,41 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: salt_solo
+  salt_install: bootstrap
+  salt_bootstrap_options: -P git v2015.8.3
+  is_file_root: true
+  state_top_from_file: true
+  salt_copy_filter:
+    - .bundle
+    - .git
+    - .kitchen
+    - Gemfile
+    - Gemfile.lock
+    - prepare_ec2.sh
+    - vendor
+
+platforms:
+  - name: fedora-22
+  - name: freebsd-10.2-ec2
+    driver:
+      name: ec2
+      image_id: ami-f709a29c
+      region: us-east-1
+      availability_zone: us-east-1b
+      instance_type: t2.micro
+      subnet_id: subnet-0b213152
+      security_group_ids: ["sg-df2d7ab9"]
+      aws_ssh_key_id: freebsd-ec2
+      user_data: prepare_ec2.sh
+    transport:
+      username: ec2-user
+      ssh_key: <%= File.expand_path('~/.ssh/freebsd-ec2.pem') %>
+      connection_timeout: 60
+      connection_retries: 10
+
+suites:
+  - name: default
+
