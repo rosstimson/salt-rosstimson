@@ -1,5 +1,6 @@
 base:
   '*':
     - base
+    - wifi
     - rosstimson
 
