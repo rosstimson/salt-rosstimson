@@ -6,6 +6,7 @@ base.packages:
       - git
       - gmake
       - gnuls
+      - subversion
       - sudo
       - wget
       - zsh

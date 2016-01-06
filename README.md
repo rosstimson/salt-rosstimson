@@ -8,6 +8,9 @@ Provision my laptop with [SaltStack][saltstack].
 
 - [ ] Secrets in pillars e.g. user password/ssh key and wifi password.
 - [ ] Compatibility with both FreeBSD and Linux (Fedora).
+- [ ] Fetch port tree (this will take a long time and might break Wercker CI).
+- [ ] Install `password-store` via port for git and xclip support.
+- [ ] Install `par` there is no port for this.
 
 ## Development
 
