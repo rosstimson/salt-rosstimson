@@ -25,10 +25,15 @@ provisioner:
     - .bundle
     - .git
     - .kitchen
+    - .kitchen.yml
     - Gemfile
     - Gemfile.lock
-    - prepare_ec2.sh
+    - LICENSE
+    - README.md
+    - circle.yml
+    - scripts
     - vendor
+    - wercker.yml
 
 platforms:
   - name: freebsd-10.2
