@@ -5,7 +5,6 @@ base.packages:
       - curl
       - git
       - gmake
-      - gnuls
       - subversion
       - sudo
       - wget
