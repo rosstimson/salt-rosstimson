@@ -11,7 +11,7 @@ pkg install -y ca_root_nss
 # Install Salt
 fetch -o /tmp/install_salt.sh https://bootstrap.saltstack.com
 chmod +x /tmp/install_salt.sh
-/tmp/install_salt.sh -X -P git v2015.8.3
+/tmp/install_salt.sh -X -P git v2015.8.7
 
 # When install salt with git option a minion config is created rather than a
 # minion.sample.  Check for it and backup before writing own.
