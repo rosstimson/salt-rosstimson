@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-packages = %w(bash curl git gmake gnuls sudo wget zsh)
+packages = %w(bash curl git gmake sudo wget zsh)
 
 describe 'base.packages' do
   packages.each do |name|
