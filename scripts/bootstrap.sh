@@ -32,15 +32,15 @@ pillar_roots:
 EOF
 
 # Create Salt dirs, script will bail if these are already present.
-mkdir ${SALT_ROOT}/states
-mkdir ${SALT_ROOT}/pillar
+mkdir -p ${SALT_ROOT}/states
+mkdir -p ${SALT_ROOT}/pillar
 
 # Fetch tarball of Salt state repo and copy into correct locations.  The
 # project is organised a little odd due to kitchen-salt, just copy what is
 # needed rather than everything.
 fetch -o /tmp/salt-rosstimson.tar.gz \
   https://github.com/rosstimson/salt-rosstimson/archive/master.tar.gz
-tar xzvf /tmp/salt-rosstimson.tar.gz
+tar xzvf /tmp/salt-rosstimson.tar.gz -C /tmp
 
 cd /tmp/salt-rosstimson-master
 cp top.sls ${SALT_ROOT}
