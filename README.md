@@ -4,6 +4,21 @@
 
 Provision my laptop with [SaltStack][saltstack].
 
+## Usage
+
+Bootstrap laptop with:
+
+    $ fetch -o - http://ross.run | /bin/sh
+
+Set password for user:
+
+    $ passwd rosstimson
+
+Set wifi credentials:
+
+    $ nvim /etc/wpa_supplicant.conf
+
+
 ## Todo
 
 - [ ] Secrets in pillars e.g. user password/ssh key and wifi password.
