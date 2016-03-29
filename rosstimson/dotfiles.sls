@@ -6,7 +6,7 @@ dotfiles:
     - require:
       - pkg: base.packages
   cmd.wait:
-    - name: gmake install
+    - name: make install
     - cwd: /home/rosstimson/code/dotfiles
     - shell: /usr/local/bin/bash
     - user: rosstimson
