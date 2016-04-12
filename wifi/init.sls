@@ -1,7 +1,7 @@
 include:
   {% if grains['os']=="FreeBSD" %}
-  - wifi.config.freebsd
+  - wifi.config-freebsd
   {% endif %}
   {% if grains['os']=="OpenBSD" %}
-  - wifi.config.openbsd
+  - wifi.config-openbsd
   {% endif %}
