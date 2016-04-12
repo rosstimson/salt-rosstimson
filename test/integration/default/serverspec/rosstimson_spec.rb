@@ -92,3 +92,18 @@ describe 'rosstimson.dotfiles' do
     it { should be_grouped_into 'rosstimson' }
   end
 end
+
+describe 'rosstimson.wallpaper' do
+  describe file('/home/rosstimson/pictures/wallpapers/elementarian/sierra-sunset-romain-guy.jpg') do
+    it { should be_file }
+    it { should be_owned_by 'rosstimson' }
+    it { should be_grouped_into 'rosstimson' }
+  end
+
+  describe file('/home/rosstimson/pictures/wallpapers/default') do
+    it { should be_symlink }
+    it { should be_linked_to '/home/rosstimson/pictures/wallpapers/elementarian/sierra-sunset-romain-guy.jpg' }
+    it { should be_owned_by 'rosstimson' }
+    it { should be_grouped_into 'rosstimson' }
+  end
+end
