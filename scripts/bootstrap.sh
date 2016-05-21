@@ -24,7 +24,7 @@ case $(uname) in
   FreeBSD)
     fetch -o /tmp/install_salt.sh https://bootstrap.saltstack.com
     chmod +x /tmp/install_salt.sh
-    /tmp/install_salt.sh -X -P git v2015.8.8
+    /tmp/install_salt.sh -X -P git v2015.8.10
   ;;
   OpenBSD)
     pkg_add salt
