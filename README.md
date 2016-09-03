@@ -6,17 +6,29 @@ Provision my laptop with [SaltStack][saltstack].
 
 ## Usage
 
-Bootstrap laptop with:
+### Bootstrap laptop with:
 
-    $ fetch -o - http://ross.run | /bin/sh
+#### FreeBSD
 
-Set password for user:
+	$ fetch -o - http://ross.run | /bin/sh
 
-    $ passwd rosstimson
+#### OpenBSD
 
-Set wifi credentials:
+	$ ftp -o - http://ross.run | /bin/sh
 
-    $ nvim /etc/wpa_supplicant.conf
+### Set password for user:
+
+	$ passwd rosstimson
+
+### Set wifi credentials:
+
+#### FreeBSD
+
+	$ vi /etc/wpa_supplicant.conf
+
+#### OpenBSD
+
+	$ vi /etc/hostname.iwn0
 
 
 ## Todo
