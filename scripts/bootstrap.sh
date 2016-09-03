@@ -19,7 +19,7 @@ case $(uname) in
   ;;
   # Set local mirror for pkg_add as we'll just use packages to instal Salt.
   OpenBSD)
-    echo 'installpatch = mirror.bytemark.co.uk' > /etc/pkg.conf
+    echo 'installpath = mirror.bytemark.co.uk' > /etc/pkg.conf
   ;;
 esac
 
