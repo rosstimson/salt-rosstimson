@@ -17,6 +17,10 @@ case $(uname) in
     env ASSUME_ALWAYS_YES=YES pkg bootstrap
     pkg install -y ca_root_nss
   ;;
+  # Set local mirror for pkg_add as we'll just use packages to instal Salt.
+  OpenBSD)
+    echo 'installpatch = mirror.bytemark.co.uk' > /etc/pkg.conf
+  ;;
 esac
 
 # Install Salt
