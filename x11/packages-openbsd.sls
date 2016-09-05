@@ -1,3 +1,13 @@
+x11.packages:
+  pkg.installed:
+    - pkgs:
+      - dwm
+      - dmenu
+      - feh
+      - rxvt-unicode
+      - xautolock
+      - slock
+
 x11.fonts:
   pkg.installed:
     - pkgs:

@@ -1,4 +1,4 @@
 include:
-  - x11.packages
-  - x11.fonts
-
+  {% if grains['os']=="OpenBSD" %}
+  - x11.packages-openbsd
+  {% endif %}
