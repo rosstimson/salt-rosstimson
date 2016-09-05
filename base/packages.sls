@@ -6,3 +6,6 @@ base.packages:
       - git
       - wget
       - zsh
+      {% if grains['os'] == 'OpenBSD' %}
+      - colorls
+      {% endif %}
