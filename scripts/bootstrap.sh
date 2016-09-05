@@ -78,6 +78,7 @@ cp -r base ${SALT_ROOT}/states
 cp -r wifi ${SALT_ROOT}/states
 cp -r rosstimson ${SALT_ROOT}/states
 cp -r tools ${SALT_ROOT}/states
+cp -r x11 ${SALT_ROOT}/states
 
 # Begin provsioning via Salt.
 salt-call --local state.highstate
