@@ -1,5 +1,6 @@
-file.managed:
-  - source: salt://base/files/doas.conf
-  - user: root
-  - group: wheel
-  - mode: 644
+/etc/doas.conf:
+ file.managed:
+   - source: salt://base/files/doas.conf
+   - user: root
+   - group: wheel
+   - mode: 644
