@@ -1,0 +1,2 @@
+include:
+  - langs.go
