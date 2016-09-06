@@ -9,3 +9,6 @@ base.packages:
       {% if grains['os'] == 'OpenBSD' %}
       - colorls
       {% endif %}
+      {% if grains['os'] == 'FreeBSD' %}
+      - doas
+      {% endif %}
