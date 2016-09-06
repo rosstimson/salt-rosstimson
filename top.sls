@@ -3,6 +3,7 @@ base:
     - base
     - wifi
     - rosstimson
-    - tools
+    - langs
     - x11
+    - tools
 
