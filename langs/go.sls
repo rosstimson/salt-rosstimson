@@ -30,8 +30,9 @@ go get packages:
       - go get -u github.com/nsf/gocode
 
 # Now make my user the owner of everything in my $GOPATH
-/home/rosstimson/code/go:
+chown gopath:
   file.directory:
+    - name: /home/rosstimson/code/go
     - user: rosstimson
     - group: rosstimson
     - recurse:
