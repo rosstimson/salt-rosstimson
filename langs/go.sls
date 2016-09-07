@@ -13,9 +13,9 @@ gopath:
 
 # Go packages essential for coding Go.
 # Vim and Emacs packages will expect these to be present.
+# Run as root as godoc wants to install to a privileged location.
 go get packages:
   cmd.run:
-    - runas: rosstimson
     - env:
       - GOPATH: '/home/rosstimson/code/go'
     - names:
@@ -28,3 +28,12 @@ go get packages:
       - go get -u github.com/rogpeppe/godef
       - go get -u github.com/jstemmer/gotags
       - go get -u github.com/nsf/gocode
+
+# Now make my user the owner of everything in my $GOPATH
+/home/rosstimson/code/go:
+  file.directory:
+    - user: rosstimson
+    - group: rosstimson
+    - recurse:
+      - user
+      - group
