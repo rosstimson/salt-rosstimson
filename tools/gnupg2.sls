@@ -2,7 +2,7 @@
 # between gnupg-1.x.x and gnupg-2.x.x.  And in fact even when you specify
 # the exact version it still shows an error saying it cannot find:
 #   <MIRROR>/gnupg-2.1.9p0--tgz
-{% elif grains['os']=="OpenBSD" %}
+{% if grains['os']=="OpenBSD" %}
 gnupg2:
   pkg.installed:
     - sources:
