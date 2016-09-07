@@ -9,7 +9,7 @@ dotfiles:
     - name: make install
     - cwd: /home/rosstimson/code/dotfiles
     - shell: /usr/local/bin/bash
-    - user: rosstimson
+    - runas: rosstimson
     - watch:
       - git: dotfiles
 
