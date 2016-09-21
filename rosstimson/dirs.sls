@@ -35,6 +35,12 @@
     - mode: 755
     - makedirs: true
 
+/home/rosstimson/pictures/screenshots:
+  file.directory:
+    - user: rosstimson
+    - group: rosstimson
+    - mode: 755
+
 /home/rosstimson/music:
   file.directory:
     - user: rosstimson
