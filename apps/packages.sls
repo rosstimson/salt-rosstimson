@@ -1,6 +1,6 @@
 apps.packages:
   pkg.installed:
     - pkgs:
-      - mozilla-firefox
+      - firefox
       - chromium
       - corebird
