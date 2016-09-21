@@ -4,4 +4,4 @@ go get platinum searcher:
     - env:
       - GOPATH: '/home/rosstimson/code/go'
     - names:
-      - go get -u github.com/monochromegane/the_platinum_searcher
+      - go get -u github.com/monochromegane/the_platinum_searcher/...
