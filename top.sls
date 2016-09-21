@@ -6,4 +6,5 @@ base:
     - langs
     - x11
     - tools
+    - apps
 
