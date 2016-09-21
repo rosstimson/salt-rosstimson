@@ -4,6 +4,7 @@ rosstimson:
     - shell: /usr/local/bin/zsh
     - home: /home/rosstimson
     - uid: 1337
+    - loginclass: staff
     - groups:
       - wheel
 
