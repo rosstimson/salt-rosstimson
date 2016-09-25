@@ -47,3 +47,8 @@
     - group: rosstimson
     - mode: 755
 
+/home/rosstimson/org:
+  file.directory:
+    - user: rosstimson
+    - group: rosstimson
+    - mode: 755
