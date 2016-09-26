@@ -7,6 +7,7 @@ x11.packages:
       - feh
       - rxvt-unicode
       - xautolock
+      - scrot
       - slock
 
 x11.fonts:
