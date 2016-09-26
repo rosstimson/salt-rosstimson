@@ -3,6 +3,7 @@ x11.packages:
     - pkgs:
       - dwm
       - dmenu
+      - dstat
       - feh
       - rxvt-unicode
       - xautolock
