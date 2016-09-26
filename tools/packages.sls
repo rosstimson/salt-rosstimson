@@ -5,6 +5,7 @@ tools.packages:
       - xclip
       - aspell
       - password-store
+      - the_silver_searcher
       {% if grains['os']=="FreeBSD" %}
       - neovim
       - emacs
