@@ -10,6 +10,6 @@ tools.packages:
       - emacs
       - tmux
       {% elif grains['os']=="OpenBSD" %}
-      - vim--no_x11
+      - vim--gtk2-perl-python-ruby
       - emacs--gtk2
       {% endif %}
